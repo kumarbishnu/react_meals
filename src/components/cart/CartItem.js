@@ -9,8 +9,8 @@ const CartItem = props => {
             </div>
         </div>
         <div className="d-flex align-items-center">
-            <div className="btn btn-sm btn-outline-danger me-1"><i className="fa fa-minus" /></div>
-            <div className="btn btn-sm btn-outline-danger"><i className="fa fa-plus" /></div>
+            <div className="btn btn-sm btn-outline-danger me-1" onClick={props.onRemove}><i className="fa fa-minus" /></div>
+            <div className="btn btn-sm btn-outline-danger" onClick={props.onAdd}><i className="fa fa-plus" /></div>
         </div>
     </li>
 

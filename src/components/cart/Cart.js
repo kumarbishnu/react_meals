@@ -9,8 +9,8 @@ const Cart = props => {
     const cartContext = useContext(CartContext);
     const hasItems = cartContext.items.length > 0;
     const totalAmount = cartContext.totalAmount.toFixed(2);
-    const addCartItem = item => {}
-    const removeCartItem = id => {}
+    const addCartItem = item => {cartContext.addItem(item);}
+    const removeCartItem = id => {cartContext.removeItem(id);}
 
     return <Modal id="cartModal">
         <div className="modal-body text-dark">
@@ -19,8 +19,8 @@ const Cart = props => {
                     <CartItem
                         key={item.id}
                         item={item}
-                        onAdd={addCartItem.bind(null, item.id)}
-                        onRemove={removeCartItem.bind(null, item)}
+                        onAdd={addCartItem.bind(null, item)}
+                        onRemove={removeCartItem.bind(null, item.id)}
                     />
                 )}
             </ul>
