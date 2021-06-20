@@ -7,7 +7,7 @@ const Header = (props) => {
         <nav className="navbar navbar-dark">
             <div className="container">
                 <a className="navbar-brand" href="/">ReactMeals</a>
-                <CartButton count={4} onclick={props.onShowCart} />
+                <CartButton onclick={props.onShowCart} />
             </div>
         </nav>
         <div className="banner">
